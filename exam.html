@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        body{padding-top: 50px;padding-bottom: 50px;}
+        .carousel{height: 500px;background-color: #000;
+            margin-bottom: 60px;
+        }
+        .carousel .item{height: 500px;background-color: #000;}
+        .carousel img{width: 100%;}
+        .carousel-caption p{margin-bottom: 20px;font-size: 20px;line-height:1.8; }
+        .carousel-caption a{margin-bottom: 20px;}
+        #summary-container .col-md-4{text-align: center;}
+        hr.divider{margin: 40px 0;}
+        .featrue{
+            padding: 30px 0;
+        }
+        .feature-heading{
+            font-size: 50px;
+            color: #2a5496;
+            margin-top: 120px;
+        }
+        .feature-heading .text-muted{
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">现代浏览器博物馆</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="demo-navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">综述</a></li>
+        <li><a href="#">简述</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">特点 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#tab-chrome">Chrome</a></li>
+            <li><a href="#tab-firefox">Firefox</a></li>
+            <li><a href="#tab-opera">Opera</a></li>
+            <li><a href="#tab-safari">Safair</a></li>
+            <li><a href="#tab-ie">IE</a></li>
+          </ul>
+        </li>
+        <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+   </ol>
+
+  <!-- Wrapper for slides -->
+   <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/chrome-big.jpg" alt="1 slide">
+      <div class="carousel-caption">
+          <h1>Chrome</h1>
+          <p>Google Chrome，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+          <a class="btn btn-primary" href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank" role="button">点我下载</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/firefox-big.jpg" alt="2 slide">
+      <div class="carousel-caption">
+          <h1>Chrome</h1>
+          <p>Google Chrome，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+          <a class="btn btn-primary" href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank" role="button">点我下载</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/opera-big.jpg" alt="3 slide">
+      <div class="carousel-caption">
+          <h1>Chrome</h1>
+          <p>Google Chrome，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+          <a class="btn btn-primary" href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank" role="button">点我下载</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/safari-big.jpg" alt="4 slide">
+      <div class="carousel-caption">
+          <h1>Chrome</h1>
+          <p>Google Chrome，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+          <a class="btn btn-primary" href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank" role="button">点我下载</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/ie-big.jpg" alt="5 slide">
+      <div class="carousel-caption">
+          <h1>Chrome</h1>
+          <p>Google Chrome，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+          <a class="btn btn-primary" href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank" role="button">点我下载</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">上一页</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">下一页</span>
+  </a>
+</div>
+   <div class="container" id="summary-container">
+      <div class="row">
+        <div class="col-md-4">
+            <img class="img-rounded" src="images/chrome-logo-small.jpg" alt="chrome">
+            <h2>Chrome</h2>
+            <p>该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+            <a class="btn btn-default" href="#" role="button">点我下载</a>
+        </div>
+        <div class="col-md-4">
+            <img class="img-rounded" src="images/firefox-logo-small.jpg" alt="firefox">
+            <h2>Firefox</h2>
+            <p>该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+            <a class="btn btn-default" href="#" role="button">点我下载</a>
+        </div>
+        <div class="col-md-4">
+            <img class="img-rounded" src="images/safari-logo-small.jpg" alt="safari">
+            <h2>Safari</h2>
+            <p>该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+            <a class="btn btn-default" href="#" role="button">点我下载</a>
+        </div>
+       </div>
+       <hr class="divider">
+       
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Chrome</a></li>
+          <li role="presentation"><a href="#tab-firefox" role="tab" data-toggle="tab">Firefox</a></li>
+          <li role="presentation"><a href="#tab-opera" role="tab" data-toggle="tab">Opera</a></li>
+          <li role="presentation"><a href="#tab-safari" role="tab" data-toggle="tab">Safari</a></li>
+          <li role="presentation"><a href="#tab-ie" role="tab" data-toggle="tab">IE</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+             <div class="col-md-7">
+              <h2 class="feature-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+              <p class="lead">Google Chrome，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+             </div>
+             <div class="col-md-5">
+                 <img class="img-responsive img-feature" src="images/chrome-logo.jpg" >
+             </div>
+          </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab-firefox">
+           <div class="row feature">
+            <div class="col-md-5">
+                 <img src="images/firefox-logo.jpg">
+             </div>
+             <div class="col-md-7">
+             <h2 class="feature-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+              <p class="lead">Firefox，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+              </div></div> 
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab-opera">
+           <div class="row feature">
+            <div class="col-md-7">
+             <h2 class="feature-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+              <p class="lead">Opera，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+              </div>
+              <div class="col-md-5">
+                 <img src="images/opera-logo.jpg">
+             </div>
+             </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab-safari">
+          <div class="row feature">
+           <div class="col-md-5">
+                 <img src="images/safari-logo.jpg">
+             </div>
+            <div class="col-md-7">
+             <h2 class="feature-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+              <p class="lead">Safari，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+              </div>
+              </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="tab-ie">
+           <div class="row feature">
+            <div class="col-md-7">
+             <h2 class="feature-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+              <p class="lead">IE，是一个由Google公司开发的网页浏览器。该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+              </div>
+              <div class="col-md-5">
+                 <img src="images/ie-logo.jpg">
+             </div>
+            </div>
+          </div>
+        </div>
+        <hr class="divider">
+       
+       <footer>
+           <p class="pull-right"><a href="#top">回到顶部</a></p>
+           <p>&copy; 2016</p>
+       </footer>
+   </div>
+   
+   <div class="modal fade" id="about">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">关于</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  
+  
+  
+   <script src="js/jquery.min.js"></script> 
+   <script src="js/bootstrap.min.js"></script> 
+   <script>
+       $('#demo-navbar .dropdown-menu a').on('click',function(e){
+           e.preventDefault();
+           $(this).tab('show');
+       });
+   </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        
+        #cont{margin-top:-20px;}
+        #cont_menu{height: 1000px; background: #ddd; }
+        #cont_menu p{ margin-top: 20px;}
+        #cont_menu #fpage{margin: 20px -15px; padding: 12px; }
+        #cont_menu #home{color: #fff;}
+        #cont_menu ul,#cont_menu ul li{margin: 0;padding: 0;}
+        #cont_menu ul{margin: 30px 0; list-style: none;}
+        #cont_menu ul li{margin-bottom: 20px;}
+        #contrl_panel{background: #fff;}
+        #btn_list{margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">某管理系统</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">功能1</a></li>
+            <li><a href="#">功能2</a></li>
+            <li><a href="#">功能3</a></li>
+            <li><a href="#">功能4</a></li>
+          </ul>
+        </li>
+        <li><a href="#">帮助</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="用户名...">
+          <input type="password" class="form-control" placeholder="密码...">
+        </div>
+        <button type="submit" class="btn btn-default">登录</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container-fluid" id="cont">
+       <div class="row">
+        <div class="col-md-3" id="cont_menu">
+           <p class="bg-primary" id="fpage"><a href="#" id="home">首页</a></p>
+              
+           <ul>
+               <li><a href="#">信息建立</a></li>
+               <li><a href="#">信息查询</a></li>
+               <li><a href="#">信息管理</a></li>
+           </ul>
+            <p><a href="#">设置</a></p>
+            <p><a href="#">帮助</a></p>
+         </div>
+        <div class="col-md-9" id="contrl_panel">
+           <div class="row">
+            <div class="col-md-12"><h2>管理控制台</h2><hr class="divider"></div>
+            <div class="col-md-12" id="btn_list">
+                        <button type="button" class="btn btn-default">操作1</button>
+                        <button type="button" class="btn btn-primary">操作2</button>
+                        <button type="button" class="btn btn-success">操作3</button>
+                        <button type="button" class="btn btn-info">操作4</button>
+                        <button type="button" class="btn btn-warning">操作5</button>
+                        <button type="button" class="btn btn-danger">操作6</button>
+                    </div>
+            <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">最新提醒</div>
+                            <div class="panel-body panel-info">
+                                <div class="alert alert-success" role="alert">提示您的订单(20140001)已经审批通过!</div>
+                                <div class="alert alert-danger" role="alert">提示您的订单(20140002)被打回!</div> 
+                                <div class="alert alert-warning" role="alert">提示您的订单(20130001)客户付款延迟!</div>
+                            </div>
+                        </div>
+                    </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                        <div class="panel-heading">我的任务</div>
+                            <div class="panel-body">
+                                <div class="alert alert-info" role="alert">订单审批 <span class="badge pull-right">42</span></div>
+                                <div class="alert alert-info" role="alert">收款确认 <span class="badge pull-right">20</span></div>
+                                <div class="alert alert-info" role="alert">付款确认 <span class="badge pull-right">10</span></div>
+                            </div>
+                    </div>
+                </div>
+            <div class="col-md-6">
+            <div class="panel panel-primary">  
+                          <div class="panel-heading">最新订单</div>
+                          <div class="panel-body">
+                          <table class="table table-striped">
+                             <thead>
+                              <tr><th>#</th>
+                                  <th>产品</th><th>数量</th>
+                                  <th>总金额</th><th>业务员</th>
+                              </tr></thead>
+                              <tbody>
+                              <tr><td>1</td><td>Apple Macbook air</td><td>10</td><td>80000</td><td>王小贱</td></tr>
+                              <tr><td>2</td><td>Apple iPad air</td><td>20</td><td>65000</td><td>尹开花</td></tr>
+                              <tr><td>3</td><td>Apple Macbook pro</td><td>5</td><td>50000</td><td>刘老银</td></tr></tbody>
+                          </table>
+                          
+                          <a href="#" class="btn btn-primary" >查看详情>></a>
+                          </div>
+                        </div>
+                    </div>
+            <div class="col-md-6">
+                        <div class="panel panel-primary">
+                          <div class="panel-heading">工程进度</div>
+                            <div class="panel-body">
+                           <p><a class="btn btn-primary">水井挖掘工程</a></p>
+                            <div class="progress">
+                               <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span class="sr-only">60% Complete</span>
+                                  </div>
+                                </div>
+                                <p><a class="btn btn-danger">基建工程</a></p>
+                                <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                    <span class="sr-only">60% Complete</span>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+      </div>
+    </div>
+   
+   
+   
+   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
