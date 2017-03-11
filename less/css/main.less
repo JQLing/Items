@@ -1,0 +1,159 @@
+//变量
+@box_width:200px;
+@posi_width:50px;
+//混合
+.border{
+    border: 1px solid #111;
+}
+.border_d2(@border_width){
+    border: @border_width solid #1fe;
+}
+.border_d3(@border_width:2px){
+    border: @border_width solid #1ae;
+}
+.border_radius(@radius:10px){
+    -webkit-border-radius:@radius;
+    -mox-border-radius:@radius;
+    border-radius:@radius;
+}
+.wrap:after{
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+.box{
+    float: left;
+    width: @box_width;
+    height: @box_width;
+    background: #ccf;
+//    .border;
+    .border_d2(4px);
+//    .border_d3();
+    .border_radius(16px);
+    
+} 
+.box2,.box3{
+    .box;
+    margin-left: 10px;
+}
+//.box,.box2{}
+
+//匹配模式
+.triangle(bottom,@w:10px,@c:#4df){
+    border-width: @w;
+    border-color: @c transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+}
+.triangle(left,@w:10px,@c:#4df){
+    border-width: @w;
+    border-color: transparent @c transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+.triangle(top,@w:10px,@c:#4df){
+    border-width: @w;
+    border-color: transparent transparent @c transparent;
+    border-style: dashed dashed solid dashed;
+}
+.triangle(right,@w:10px,@c:#4df){
+    border-width: @w;
+    border-color: transparent transparent transparent @c;
+    border-style: dashed dashed dashed solid;
+}
+.triangle(@_,@w:10px,@c:#4df){
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sanJiao{
+//    .triangle(right);
+    .triangle(right,50px);
+}
+
+//避免编译
+.menu{
+    width: ~'calc(200px-100px)';
+    height: 40px;
+    margin: 0 auto;
+    background: #ccc;
+}
+
+
+
+//匹配模式 --- 定位
+.pos(r){
+    position: relative;
+}
+.pos(a){
+    position: absolute;
+}
+.pos(f){
+    position: fixed;
+}
+
+.posi{
+    .pos(a);
+    top: 10px;
+    right: 0;
+    width: @posi_width;
+    height: @posi_width; 
+}
+
+
+.content{
+    width: @box_width + 400;
+    height: 2 * ( @box_width + 100 );
+    margin-top: 50px;
+}
+.list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+        width: 400px;
+        height: 40px;
+        margin-bottom: 2px;
+        background: #ccc;
+    }
+    strong{
+        float: left;
+        width: 30px;
+        height: 40px;
+        line-height: 40px;
+        background: #fa2;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+    }
+    a{
+        float: left;
+        max-width: 200px;
+        line-height: 40px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+//        &代表上一层选择器
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    span{
+        float: left;
+        margin-left: 10px;
+        line-height: 40px;
+    }
+    
+}
+
+
+
+
+
+
+
+

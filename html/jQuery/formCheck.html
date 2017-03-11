@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{font-family: Verdana;font-size: 96%;}
+        label{float: left;width: 10em;}
+        label.error{float: none;padding-left: .5em;color: red;vertical-align: top;}
+        section{clear: both;}
+        .submit{margin-left: 12em;}
+        em{padding-left: 1em; font-weight: bold;vertical-align: top;}
+        em.error{background: url("../images/unchecked.gif") no-repeat 0px 0px;}
+        em.success{padding-left:16px;background: url("../images/checked.gif") no-repeat 0px 0px; }
+    </style>
+</head>
+<body>
+    <form class="cmxform" id="commentForm" method="get" action="#">
+        <fieldset>
+            <legend>带验证提示的评论例子</legend>
+            <section>
+                <label for="username">姓名</label><em>*</em>
+                <input id="username" name="username" type="text" size="25">
+            </section>
+            <section>
+                <label for="email">电子邮件</label><em>*</em>
+                <input id="email" name="emali" type="emali" size="25">
+            </section>
+            <section>
+                <label for="url">网址</label><em> &nbsp;</em>
+                <input id="url" name="url" type="text" size="25" value="">
+            </section>
+            <section>
+                <label for="comment">你的评论</label><em>*</em>
+                <textarea id="comment" name="comment" cols="22"></textarea>
+            </section>
+            <section>
+                <label for="valcode">验证码</label>
+                <input id="valcode" name="valcode" type="text" size="25" value="">=7+9
+            </section>
+            <section>
+                <input class="submit" type="submit" value="提交">
+            </section>
+        </fieldset>
+    </form>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.validate-1.13.1.js"></script>
+<script src="../js/lib/jquery.metadata.js"></script>
+<script src="../js/lib/jquery.validate.messages_cn.js"></script>
+<script>
+    $(function(){
+        $("#commentForm").validate({
+            rules:{
+                username:{
+                    required:true,
+                    minlength: 2,
+                    maxlength:10
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                url:"url",
+                comment:"required",
+//        调用自定义的验证规则
+                valcode:{formula: "7+9"}
+            },
+            message:{
+                username:{
+                    required:"必须填写用户名",
+                    minlength: "用户名最短为2位",
+                    maxlength: "用户名最长为10位"
+                },
+                email:{
+                    required:"必须填写邮件地址",
+                    email:"请填写正确的邮件格式"
+                }
+            },
+            errorElement:"em",
+            success:function(label){
+                label.text(" ")
+                    .addClass("success");
+            }
+        });
+        
+//        自定义一个验证规则（验证方法）
+        $.validator.addMethod(
+            "formula",
+            function(value,element,param){
+                return value=eval(param);
+            },
+            '请正确输入数学公式计算后的结果'
+        );
+
+        
+    });
+</script>
+</html>

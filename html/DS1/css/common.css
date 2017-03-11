@@ -1,0 +1,49 @@
+/*公共样式*/
+.clear{zoom:1}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+/*
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+*/
+}
+.fl{float:left;}
+.fr{float:right;}
+.gradient{
+    background: -webkit-linear-gradient(top,#ffffff,#f8f8f8);
+    background: -moz-linear-gradient(top,#ffffff,#f8f8f8);
+    background: -ms-linear-gradient(top,#ffffff,#f8f8f8);
+    background: linear-gradient(top,#ffffff,#f8f8f8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#f8f8f8)";
+    +background: #f9f9f9;
+}
+#header,#nav,.content{
+    width: 960px;
+    margin: 0 auto;
+}
+#search,.section,.side_section,.ad_border,#footer,.activity,.recomment{
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+}
+.main_ad,.side_section,.ad_border,.side_ad{
+    margin-bottom: 10px;
+}
+.triangle_up,.triangle_down_red,.triangle_down_gray{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: 4px solid transparent;
+}
+.triangle_up{
+    border-bottom-color: #ca0309;  
+}
+.triangle_down_red{
+    border-top-color: #ca0309;
+}
+.triangle_down_gray{
+    border-top-color: #c1c1c1;
+}

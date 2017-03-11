@@ -1,0 +1,134 @@
+body,h1,h2,h3,h4,h5,h6,ul,li{padding: 0; margin: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+.list:after{
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+
+@font14:14px;
+
+.pos(r){
+    position: relative;
+}
+.pos(a){
+    position: absolute;
+}
+//列表总宽度
+@td_width:642px;
+
+.main{
+    width: @td_width;
+    margin: 0 auto;
+}
+.title{
+    @h:62px;
+    @border_color:#d0d0d0;
+    height: @h;
+    line-height: @h;
+    border-top: 1px solid @border_color;
+    margin-top: 20px;
+    
+    @color:#575757;
+    h3{
+        position: relative;
+        float: left;
+        width: 106px;
+        height: @h - 1;
+        border-top: 2px solid #f97374;
+        margin-top: -1px;
+        color: @color;
+        font: 22px/@h "微软雅黑";
+    }
+    &_nav{
+        float: right;
+        font-size: @font14;
+        color: @color;
+        li{
+            float: left;
+            a{
+                color: @color;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            span{
+                margin: 0 11px;
+            }
+        }
+          
+    }
+}
+.content{
+    width: @td_width;
+}
+.list{
+     @img_w:200px;
+     @img_h:168px;
+    
+     li{
+         float: left;
+         width: @img_w;
+         margin: 0 14px 10px 0;
+     }
+     .img{
+         .pos(r);
+         display: block;
+         width: @img_w;
+         height: @img_h;
+         img{
+            width: @img_w;
+            height: @img_h;
+            border: none;
+        }
+         span{
+            .pos(a);
+            right: 0;
+            bottom: 0;
+            width: 45px;
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid #9af;
+            border-radius: 10px 0 0 10px;
+            background-color: #9af;
+            color: #fff;
+            font-size: @font14;
+            text-indent: 9px;
+        }
+    }
+}
+.info{
+    &_title , .author{
+        display: block;
+        margin-top: 10px;
+        color: #000;
+        font-size: @font14 -2;
+        line-height: 22px;
+        &:hover{
+            text-decoration: underline;
+        }
+     } 
+    .author{
+        padding-left: 24px;
+        background: url(../images/author.JPG) no-repeat;
+        line-height: 22px;
+    }
+   p{
+        padding-left: 24px;
+        background: url(../images/click.JPG) no-repeat;
+        font-size: @font14  -2;
+        line-height: 22px;
+    }
+    span{
+        display: inline-block;
+        padding-left: 24px;
+        background: url(../images/comments.JPG) no-repeat;
+        font-size: @font14  -2;
+        line-height: 22px;
+    }  
+
+}
