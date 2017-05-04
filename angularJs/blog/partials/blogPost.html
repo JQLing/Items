@@ -1,0 +1,50 @@
+<!-- <div ng-include src="'partials/menu.html'"></div> -->
+<!--优雅的写法-->
+<div blg-menu menu-title="AngularJs Blog"></div>
+
+<div id="container" class="container">
+	<div class="blog-post-label">Blog Entry</div>
+	<div class="blog-entry-wrapper">
+		<div class="blog-intro-text">
+			Posted: {{blogEntry.date | date:'MM/dd/yyyy @ h:mma'}}
+		</div>
+		<div class="blog-entry-outer">
+			{{blogEntry.blogText}}
+		</div>
+		<div class="blog-comment-wrapper">
+			<div class="blog-comment-label">Blog Comments</div>
+			<div class="blog-entry-comments" ng-repeat="comment in blogEntry.comments">{{comment.commentText}}
+			</div>
+		</div>
+		
+		<div class="blog-comment-wrapper">
+			<form class="" ng-submit="submit()" ng-controller="BlogViewCtrl">
+				<input type="hidden" ng-model="blogId">
+				<div class="blog-post-label">
+					<label for="commentText">New Comment:</label>
+				</div>
+				<div class="blog-post-entry-element">
+					<textarea name="commentText" type="text" class="blog-post-textarea" ng-model="commentText" placeholder="Comment" required></textarea>
+				</div>
+				<div class="blog-post-button">
+					<button type="submit" class="form-button">Submit</button>
+				</div>
+			</form>
+		</div>
+		
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

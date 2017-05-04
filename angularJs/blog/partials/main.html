@@ -1,0 +1,27 @@
+<!-- <div ng-include src="'partials/menu.html'"></div> -->
+<!--优雅的写法-->
+<div blg-menu menu-title="AngularJs Blog"></div>
+
+<div id="container" class="container">
+	<div class="blog-post-label">Blog Posts</div>
+	<div class="post-wrapper">
+		<div ng-repeat="blogPost in blogList">
+			<div class="blog-post-outer">
+				<div class="blog-intro-text">
+					Posted: {{blogPost.date | date:'MM/dd/yyyy @ h:mma'}}
+				</div>
+				
+				<div class="blog-intro-text">
+					{{blogPost.introText}}
+				</div>
+				
+				<div class="blog-read-more">
+					<a href="#!blogPost/{{blogPost._id}}">Read More</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+

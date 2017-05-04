@@ -1,0 +1,34 @@
+<!-- <div ng-include src="'partials/menu.html'"></div> -->
+<!--优雅的写法：-->
+<div blg-menu menu-title="AngularJs Blog"></div>
+
+<div class="container" id="container">
+	<div class="blog-post-label">New Blog Posts</div>
+	<div class="blog-post-wrapper">
+<!--		<form class="" ng-submit="submit()" ng-controller="NewBlogPostCtrl">-->
+		<form class="" ng-submit="submit()">
+			<div class="blog-post-entry-label">
+				<label for="introText">Intro Text:</label>
+			</div>
+			<div class="blog-post-entry-element">
+				<textarea name="introText" class="blog-post-textarea" type="text" ng-model="introText" placeholder="Intro Text" required></textarea>
+			</div>
+			<div class="blog-post-entry-label">
+				<label for="blogText">Blog Text:</label>
+			</div>
+			<div class="blog-post-entry-element">
+				<textarea name="blogText" class="blog-post-textarea" type="text" ng-model="blogText" placeholder="Blog Text" required></textarea>
+			</div>
+			<div class="blog-post-entry-label">
+				<label for="blogText">Language:</label>
+			</div>
+			<div class="blog-post-entry-element">
+				<select name="languageId" class="form-select-element-left"
+				 ng-model="languageId" ng-options="lan.id as lan.name for lan in languageList" placeholder="Blog Text" required></select>
+			</div>
+			<div class="blog-post-button">
+				<button class="form-button" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>

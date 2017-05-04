@@ -1,0 +1,20 @@
+<div class="blog-login-wrapper">
+	<form class="" ng-submit="submit()" ng-controller="LoginCtrl">
+		<div class="blog-login-error">{{error}}</div>
+		<div class="blog-login-label">
+			<label for="username">Username:</label>
+		</div>
+		<div class="blog-login-element">
+			<input type="text" ng-model="username" name="username" placeholder="username" required>
+		</div>
+		<div class="blog-login-label">
+			<label for="password">Password:</label>
+		</div>
+		<div class="blog-login-element">
+			<input type="password" ng-model="password" name="password" placeholder="password" required>
+		</div>
+		<div class="blog-login-button">
+			<button type="submit" class="form-button">Sign in</button>
+		</div>
+	</form>
+</div>
